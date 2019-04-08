@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project learn-k8s-236917
   - gcloud config set compute/zone asia-southeast1-a	
-  - gcloud container cluster get-credentials learn-k8s-cluster
+  - gcloud container clusters get-credentials learn-k8s-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_USERNAME" --password-stdin
   - docker build -t kukutapan/react-test -f ./client/Dockerfile.dev ./client
 
